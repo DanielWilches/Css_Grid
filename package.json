@@ -1,0 +1,27 @@
+{
+  "name": "css_grid",
+  "version": "1.0.0",
+  "description": "Proyecto de estudio de css grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielWilches/Css_Grid.git"
+  },
+  "keywords": [
+    "cssGrid"
+  ],
+  "author": "Daniel prieto wilches",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielWilches/Css_Grid/issues"
+  },
+  "homepage": "https://github.com/DanielWilches/Css_Grid#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}
