@@ -1,3 +1,993 @@
-body{
-    background-color: black;
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 }
+
+body {
+    background-color: white;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tenicas_aliniamineto {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    h1,
+    h2 {
+        width: 100%;
+        padding: 0;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        font-family: 'Roboto',
+            sans-serif;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        position: sticky;
+        display: block;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    font-family: 'Lato', sans-serif;
+    width: 550px;
+}
+
+.container {
+    background: turquoise;
+    width: 180px;
+    height: 180px;
+}
+
+.element {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.element1 {
+    @extend .element;
+    background: papayawhip;
+    // margin: ;
+}
+
+.element2 {
+    @extend .element;
+    background: papayawhip;
+    margin: 60px 0;
+}
+
+.element3 {
+    @extend .element;
+    background: papayawhip;
+    margin: 120px 0 0 0;
+}
+
+.element4 {
+    @extend .element;
+    background: pink;
+    margin: 0 auto;
+}
+
+.element5 {
+    @extend .element;
+    background: pink;
+    margin: 60px auto;
+}
+
+.element6 {
+    @extend .element;
+    background: pink;
+    margin: 120px auto 0;
+}
+
+.element7 {
+    @extend .element;
+    background: lightcyan;
+    margin: 0 0 0 auto;
+}
+
+.element8 {
+    @extend .element;
+    background: lightcyan;
+    margin: 60px 0 60px auto;
+}
+
+.element9 {
+    @extend .element;
+    background: lightcyan;
+    margin: calc(100% - 60px) 0 0 auto;
+}
+
+// tecnica con line heigth
+
+.lineCon {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        font-family: 'Lato', sans-serif;
+        width: 550px;
+    }
+
+    .container {
+        background: turquoise;
+        width: 180px;
+        height: 180px;
+    }
+
+    .element {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin: 0
+    }
+
+    .container1 {
+        @extend .container;
+        text-align: left;
+        line-height: 180px;
+    }
+
+    .element1 {
+        @extend .element;
+        background: papayawhip;
+        display: inline-block;
+        line-height: 45px;
+        vertical-align: top;
+    }
+
+    .element2 {
+        @extend .element;
+        background: papayawhip;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: middle;
+    }
+
+    .element3 {
+        @extend .element;
+        background: papayawhip;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: bottom;
+    }
+
+    .container2 {
+        @extend .container;
+        text-align: center;
+        line-height: 180px;
+    }
+
+    .element4 {
+        @extend .element;
+        background: pink;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .element5 {
+        @extend .element;
+        background: pink;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: middle;
+    }
+
+    .element6 {
+        @extend .element;
+        background: pink;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: bottom;
+    }
+
+    .container3 {
+        @extend .container;
+        text-align: right;
+        line-height: 180px;
+    }
+
+    .element7 {
+        @extend .element;
+        background: lightcyan;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: top;
+    }
+
+    .element8 {
+        @extend .element;
+        background: lightcyan;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: middle;
+    }
+
+    .element9 {
+        @extend .element;
+        background: lightcyan;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: bottom;
+    }
+}
+
+// tecnicas aliniamiento con display:table-cell
+
+.contablecell {
+    .element {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .element1 {
+        @extend .element;
+        background: papayawhip;
+        display: inline-block;
+    }
+
+    .element2 {
+        @extend .element;
+        background: pink;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .element3 {
+        @extend .element;
+        background: lightcyan;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .container {
+        background: turquoise;
+        border: 1px solid white;
+        width: 180px;
+        height: 180px;
+    }
+
+    .container1 {
+        @extend .container;
+        display: table-cell;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .container2 {
+        @extend .container;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .container3 {
+        @extend .container;
+        display: table-cell;
+        text-align: right;
+        vertical-align: bottom;
+    }
+
+    .container4 {
+        @extend .container;
+        display: table-cell;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .container5 {
+        @extend .container;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .container6 {
+        @extend .container;
+        display: table-cell;
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    .container7 {
+        @extend .container;
+        display: table-cell;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    .container8 {
+        @extend .container;
+        display: table-cell;
+        text-align: right;
+        vertical-align: middle;
+    }
+
+    .container9 {
+        @extend .container;
+        display: table-cell;
+        text-align: right;
+        vertical-align: bottom;
+    }
+}
+
+.conPositions {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        font-family: 'Lato', sans-serif;
+        width: 550px;
+    }
+
+    .container {
+        background: turquoise;
+        width: 180px;
+        height: 180px;
+        position: relative;
+    }
+
+    .element {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .element1 {
+        @extend .element;
+        background: papayawhip;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .element2 {
+        @extend .element;
+        background: papayawhip;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .element3 {
+        @extend .element;
+        background: papayawhip;
+        position: absolute;
+        left: 0;
+        // bottom: 0;
+        top: 100%;
+        transform: translateY(-100%);
+    }
+
+    .element4 {
+        @extend .element;
+        background: pink;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .element5 {
+        @extend .element;
+        background: pink;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .element6 {
+        @extend .element;
+        background: pink;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .element7 {
+        @extend .element;
+        background: lightcyan;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translate(-100%, 0);
+    }
+
+    .element8 {
+        @extend .element;
+        background: lightcyan;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translate(-100%, -50%);
+    }
+
+    .element9 {
+        @extend .element;
+        background: lightcyan;
+        position: absolute;
+        left: 100%;
+        top: 100%;
+        transform: translate(-100%, -100%);
+    }
+}
+
+
+@mixin card {
+    background: #ffdada;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    font-family: 'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+.cardL {
+    @include card();
+    // direction:ltr;
+    // writing-mode: vertical-rl; 
+}
+
+.cardA {
+    @include card();
+    direction: rtl;
+}
+
+.cardRL {
+    @include card();
+    writing-mode: vertical-rl;
+}
+
+.cardLR {
+    @include card();
+    writing-mode: vertical-lr;
+}
+
+.cardSRL {
+    @include card();
+    writing-mode: sideways-rl;
+}
+
+.cardSLR {
+    @include card();
+    writing-mode: sideways-lr;
+}
+
+
+
+.card__header {
+    background: #dbf6e9;
+    padding: 20px;
+}
+
+.card__main {
+    background: #9ddfd3;
+    padding: 20px;
+}
+
+.descripcion-direction {
+    width: 900px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: 'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+
+.aliniamiento-flex {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        font-family: 'Lato', sans-serif;
+        width: 550px;
+    }
+
+    .container {
+        background: turquoise;
+        width: 180px;
+        height: 180px;
+    }
+
+    .element {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .element1 {
+        @extend .element;
+        background: papayawhip;
+    }
+
+    .element2 {
+        @extend .element;
+        background: pink;
+    }
+
+    .element3 {
+        @extend .element;
+        background: lightcyan;
+    }
+
+    .container1 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .container2 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .container3 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .container4 {
+        @extend .container;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container5 {
+        @extend .container;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container6 {
+        @extend .container;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .container7 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .container8 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container9 {
+        @extend .container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .element1,
+    .element2,
+    .element3 {
+        margin: 0;
+    }
+}
+
+
+
+.alineacionInterna,
+.minmaxprueba {
+    width: 100%;
+    max-width: 1600px;
+    border: 2px solid red;
+    border-radius: 6px;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px;
+
+    h2 {
+        width: 100%;
+        max-width: 1500px;
+        margin: 20px auto;
+        color: black;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-family: 'Segoe UI',
+            Tahoma,
+            Geneva,
+            Verdana,
+            sans-serif;
+    }
+
+}
+
+
+
+.conGrup1,
+.conGrup2 {
+    width: 100%;
+    height: auto;
+}
+
+
+@mixin gridPlantilla($max-width, $height) {
+    width: 100%;
+    max-width: $max-width;
+    height: $height;
+    border: #0ba017 solid 2px;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    transition: 1s all ease;
+
+    div {
+        min-width: 70px;
+        min-height: 70px;
+        padding: 20px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.ejemploitems {
+    @include gridPlantilla(500px, 500px);
+}
+
+.grid-content {
+    // max-width  // heigth
+    @include gridPlantilla(none, 700px);
+    width: 100%;
+    border: 15px dotted #0ba017;
+    grid-template: repeat(2, 200px) / repeat(2, 200px);
+    margin: 0;
+}
+
+.Jstart {
+    justify-items: start;
+}
+
+.Jend {
+    justify-items: end;
+}
+
+.Jcenter {
+    justify-items: center;
+}
+
+.Jstrech {
+    justify-items: stretch;
+}
+
+.Astart {
+    align-items: start;
+}
+
+.Aend {
+    align-items: end;
+}
+
+.Acenter {
+    align-items: center;
+}
+
+.Astretch {
+    align-items: stretch;
+}
+
+.element1g {
+    background-color: deeppink;
+}
+
+.element2g {
+    background-color: deepskyblue;
+}
+
+.element3g {
+    background-color: darkgray;
+}
+
+.element4g {
+    background-color: darkcyan;
+}
+
+
+
+.botonera-items {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    flex-flow: row wrap;
+    // justify-content: center;
+    padding: 20px 10px;
+
+    button {
+        text-transform: capitalize;
+        font-size: 25px;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        transition: .1s all ease;
+        transform: scale(1);
+        cursor: pointer;
+
+        &:active {
+            transform: scale(.9);
+        }
+
+        &[value='start'] {
+            background-color: darkgoldenrod;
+        }
+
+        &[value='end'] {
+            background-color: rgb(92, 190, 92);
+        }
+
+        &[value='center'] {
+            background-color: gold;
+        }
+
+        &[value='stretch'] {
+            background-color: deepskyblue;
+        }
+
+    }
+}
+
+.button-justifyItems,
+.button-alingItems {
+    width: 40%;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.button-justifyItems {
+    background-color: coral;
+}
+
+.button-alingItems {
+    background-color: cornflowerblue;
+}
+
+.button-propiedad {
+    width: 24%;
+    height: 40px;
+    margin: auto;
+}
+
+.conButon {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 300px;
+    max-width: 1440px;
+    border: 1px solid red;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        width: 10%;
+        height: 100px;
+        line-height: 100px;
+        margin: auto;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        background-color: darkgreen;
+        transition: .2s ease-in-out;
+
+        &:active {
+            transform: scale(.9);
+        }
+
+    }
+}
+
+//estilos de content
+.content-button {
+    max-width: 1124px;
+
+    button {
+        margin: 10px auto;
+        height: 50px;
+        padding: 0 20px;
+
+        &[value='justify-content'] {
+            width: 47%;
+            background-color: aqua;
+        }
+
+        &[value='align-content'] {
+            width: 47%;
+            background-color: forestgreen;
+        }
+
+        &[value='space-around'] {
+            background-color: hotpink;
+        }
+
+        &[value='space-between'] {
+            background-color: indigo;
+        }
+
+        &[value='space-evenly'] {
+            background-color: indianred;
+        }
+    }
+}
+
+.JCstart {
+    justify-content: start;
+}
+
+.JCend {
+    justify-content: end;
+}
+
+.JCcenter {
+    justify-content: center;
+}
+
+.JCstretch {
+    justify-content: stretch;
+}
+
+.JCspace-around {
+    justify-content: space-around;
+}
+
+.JCspace-between {
+    justify-content: space-between
+}
+
+.JCspace-evenly {
+    justify-content: space-evenly;
+}
+
+.ACstart {
+    align-content: start;
+}
+
+.ACcenter {
+    align-content: center;
+}
+
+.ACend {
+    align-content: end;
+}
+
+.ACstretch {
+    align-content: stretch;
+}
+
+.ACspace-around {
+    align-content: space-around;
+}
+
+.ACspace-between {
+    align-content: space-between;
+}
+
+.ACspace-evenly {
+    align-content: space-evenly;
+}
+
+
+.grid-prueba{
+    // width: 100%;
+    // max-width: 1500px;
+    margin:  20px auto;
+    height: auto;
+    display: grid;
+    // grid-template-columns:  repeat(4, minmax(200px, 300px));
+    grid-template-columns:  repeat(auto-fill, minmax(200px, 250px));
+    // grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr));
+    // grid-template-columns: auto fit-content(800px, auto-fill)  auto;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    transition:  all 1s ease;
+    // grid-auto-flow: row dense ;
+
+    div{
+        width: 100%;
+        max-width: 200px;
+        min-height: 200px;
+        border-radius: 6px;
+    }
+}
+
+/**
+* Prueba grid
+**/
+
+@import './Grid.scss';

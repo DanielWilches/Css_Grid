@@ -24,5 +24,5 @@ gulp.task("sass", () => {
 });
 
 gulp.task("watch", () => {
-    return gulp.watch("./styles.scss", gulp.series("sass"));
+    return gulp.watch("./**.scss", gulp.series("sass"));
 });
